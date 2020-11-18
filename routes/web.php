@@ -6,6 +6,7 @@ use App\Http\Controllers\MunicipioController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\EventoController;
+use App\Http\Controllers\APIController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -96,3 +97,9 @@ Route::get('/fullWorkRelated', [SearchController::class, 'get_Work_Related'])->n
 Route::get('/fullImpairment', [SearchController::class, 'get_Impairment'])->name('SearchController.getImpairment')->middleware('auth');
 Route::get('/fullTypeImpairment', [SearchController::class, 'get_Type_Impairment'])->name('SearchController.getTypeImpairment')->middleware('auth');
 Route::get('/fullEthnicGroup', [SearchController::class, 'get_Ethnic_Group'])->name('SearchController.getEthnicGroupt')->middleware('auth');
+
+
+
+// Seleccionar datos de api
+Route::get('/fullWebAPI', [APIController::class, 'index'])->name('UsuarioController.index')->middleware('auth');
+Route::get('/apisPrueba', [APIController::class, 'get_WebAPI_data'])->name('dataWebAPI')->middleware('auth');

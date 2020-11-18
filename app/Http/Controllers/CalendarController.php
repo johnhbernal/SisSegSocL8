@@ -6,6 +6,7 @@ use App\Calendar;
 // use Request;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Illuminate\Routing\Controller;
 
 class CalendarController extends Controller
 {

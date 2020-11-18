@@ -11,7 +11,7 @@ use App\Models\Departamento;
 use Illuminate\Http\Request;
 use App\Models\Pais;
 use App\Models\Enum;
-
+use Illuminate\Routing\Controller;
 
 
 class SearchController extends Controller

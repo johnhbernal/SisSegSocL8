@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Pais;
-use App\Models\Departamento;
+
 use App\Models\Usuario;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Routing\Controller;
 
 class UsuarioController extends Controller
 {
