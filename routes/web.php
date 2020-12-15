@@ -8,6 +8,7 @@ use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\EventoController;
 use App\Http\Controllers\APIController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ExcelCSVController;
 
 
 /*
@@ -103,3 +104,11 @@ Route::get('/fullEthnicGroup', [SearchController::class, 'get_Ethnic_Group'])->n
 // Seleccionar datos de api
 Route::get('/fullWebAPI', [APIController::class, 'index'])->name('UsuarioController.index')->middleware('auth');
 Route::get('/apisPrueba', [APIController::class, 'get_WebAPI_data'])->name('dataWebAPI')->middleware('auth');
+
+
+
+
+// Rutas para importar y exportar archivos csv
+Route::get('excel-csv-file', [ExcelCSVController::class, 'index']);
+Route::post('import-excel-csv-file', [ExcelCSVController::class, 'importExcelCSV']);
+Route::get('export-excel-csv-file/{slug}', [ExcelCSVController::class, 'exportExcelCSV']);
