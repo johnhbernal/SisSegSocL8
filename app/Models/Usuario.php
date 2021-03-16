@@ -5,9 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes; //línea necesaria
+use Spatie\Permission\Traits\HasRoles;
+
 
 class Usuario extends Model
 {
+    use HasRoles;
     use HasFactory;
 
     public $table = "p_usuario";

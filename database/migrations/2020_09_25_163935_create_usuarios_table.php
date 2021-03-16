@@ -93,6 +93,7 @@ class CreateUsuariosTable extends Migration
 					'04', // Palenquero (San Basilio de Palenque).
 					'05'  // Negro(a), afrocolombiano(a).
 			) )->nullable ()->default(null);
+         //   $table->string('guard_name')->default('web');
 			$table->string ( 'created_by' )->default ( 'admin' );
             $table->softDeletes(); //Nueva línea, para el borrado lógico
 			$table->timestamps ();

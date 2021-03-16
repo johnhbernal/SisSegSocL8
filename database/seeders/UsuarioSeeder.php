@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use App\Models\Usuario;
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
 
 class UsuarioSeeder extends Seeder
 {
@@ -29,5 +31,6 @@ class UsuarioSeeder extends Seeder
             'VINCULO_LABORAL' => 'C',
             'DISCAPACIDAD' => false
         ]);
+
     }
 }
